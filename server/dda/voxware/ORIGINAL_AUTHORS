@@ -1,0 +1,23 @@
+
+[JET - this file was originally called auvoxware.man, which is no
+longer used.  This section was in the authors portion of the manpage,
+and should be preserved for history's sake :) I have removed the email
+addresses, and mention of the original X11 Display server authors.
+See the X11 source and documanetation code that information.]
+
+---
+
+The auvoxware server contains much code from the sun sample server, written
+originally by Greg Renda and Dave Lemke of NCD, who in turn borrowed much
+code from the sample X server. 
+
+The original VOXware server for Linux was written by Amancio Hasty and
+was merged with the SVR4 VOXware server, written by Stephen Hocking.
+Christian Schlichtherle then added some more Linux fixes, code to
+allow full duplex operation on those cards that supported it (GUS,
+PAS16, AudioTriX) and did some work on the 16 bit code. Stephen
+Hocking made sure it ran under FreeBSD. Shawn M. fixed it up to run
+under SCO Unix and added code to dynamically adjust the buffer sizes.
+Stephen Hocking then added code for the server to use a configuration
+file.
+

@@ -1,0 +1,13 @@
+/*
+ * NetAudio.def - Some Imake related defines for NAS
+ * 
+ * $Id$
+ *
+ * Jon Trulson 2/12/2000
+ */
+
+XCOMM Directory where NAS will look for it's config file(s)
+#ifndef NasConfigSearchPath
+#define NasConfigSearchPath /etc/nas/
+#endif
+

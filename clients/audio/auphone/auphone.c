@@ -345,8 +345,7 @@ EventHandler(AuServer *aud, AuEvent *ev, AuEventHandlerRec *handler)
 static void
 createEmptyBucket(GlobalDataPtr g, AuServer *aud, char *server, AuFlowID flow)
 {
-#   define BUFFER_LEN (100)
-    char            buf[BUFFER_LEN];
+    char            buf[100];
     AuString        desc;
     int             i;
     ServerPtr       r = &g->remote;
@@ -358,8 +357,8 @@ createEmptyBucket(GlobalDataPtr g, AuServer *aud, char *server, AuFlowID flow)
 	    break;
 
     /* format is: id, version, user, server, flow, deviceNum, multEl */
-    snprintf(buf, BUFFER_LEN, "%s %s %s %s %d %d 1",
-             BUSY, VERSION, (char *) getenv("USER"), server, flow, i);
+    sprintf(buf, "%s %s %s %s %d %d 1", BUSY, VERSION, (char *) getenv("USER"),
+	    server, flow, i);
     AuSetString(&desc, AuStringLatin1, strlen(buf), buf);
     AuCreateBucket(aud, AuFormatULAW8, 1, AuAccessListMask, 0, 0, &desc, NULL);
 }
